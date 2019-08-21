@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>index</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="btn-menu">
+            <span>navbar</span>
+        </div>
+
+        <div class="menu-mobile" id="menu-mobile">
+            <ul>
+                <li><span>facebook</span></li>
+                <li><span>whatsapp</span></li>
+                <li><span>instagram</span></li>
+                <li><span>twitter</span></li>
+                <li><span>snapchat</span></li>
+                <li><span>telegram</span></li>
+            </ul>
+            <div class="close">close</div>
+        </div>
+<br><br>
+        <button id="btn">
+            <nav></nav>
+        </button><br><br>
+        <div class="slide">leia todos os poemas</div>
+
+        
+        <div class="foto">
+
+        </div>
+
+
+
+        <script src="jquery.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
+body{
+    background: #c9c9c9;
+}
+.btn-menu{
+    background:black;
+    color:white;
+    width:500px;
+    padding:10px 0px;
+}
+.btn-menu span{
+    margin-left: 20px;
+}
+.menu-mobile{
+    background-image:url('img1.jpg');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    color:white;
+    padding:10px 0px;
+    width:500px;
+    border-top:solid 1px white;
+    display: none;
+}
+.menu-mobile span{
+    margin-left:20px;
+}
+.menu-mobile ul{
+    padding:0px;
+}
+
+.menu-mobile ul li{
+    list-style:none;
+    padding:5px;
+}
+
+.menu-mobile ul li:hover{
+    background:red;
+}
+
+.close{
+    background:black;
+    color:white;
+    width:100%;
+    padding:5px 0px;
+    margin:5px auto;
+    margin-bottom:-10px;
+    text-align: center;
+}
+
+.close:hover{
+    background:red;
+}
+
+
+#btn{
+    background:#1e5ff7;
+    color:white;
+    padding:10px;
+    width:100px;
+    height:100px;
+    border:solid 5px #ffffff;
+    border-radius:100%;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-style: double;
+}
+
+#btn nav{
+    width:50px;
+    height:50px;
+    margin:auto;
+    background-image:url('open-book.png');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+
+.slide{
+    background:rgba(0,0,0,0.4);
+    position: absolute;
+    border-radius:10px;
+    padding:10px;
+    color:white;
+    text-align:center;
+    font-family: sans-serif;
+    display: none;
+
+}
+
+.foto{
+    background-image:url('foto.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width:150px;
+    height:250px;
+    transition: transform 0.5s;
+    transition-timing-function: ease;
+    margin:auto;
+}
+
+.foto:hover{
+    transform: perspective(300px) rotateY(45deg);
+   
+}
+
+$(document).ready(function(){
+    $(".btn-menu").click(function(){
+        $(".menu-mobile").slideDown('slow')
+    })
+    $(".close").click(function(){
+        $(".menu-mobile").slideUp('slow')
+    })
+
+    var btn = $('nav')
+
+   $("#btn").mouseenter(function(){
+    	$('#btn').css({'padding':'0px'})
+    	$('nav').css({'margin':'auto'})
+    	btn.animate({width:'70px',height:'70px'},{queue:false,duration:500})
+    	$('.slide').fadeIn('slow')
+   })
+   $("#btn").mouseleave(function(){
+   	 	btn.animate({width:'50px',height:'50px'},{queue:false,duration:500})
+   	 	$('.slide').fadeOut('slow')
+   })
+  
+})
