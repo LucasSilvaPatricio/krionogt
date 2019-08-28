@@ -1,0 +1,5 @@
+manutanibilidade: O software deve ser escrito de forma que possa evoluir p/antende as necessidades do cliente;
+confiança e proteção: Um software confiável não deve causar prejuizos fisicos ou econômicos no caso de falha no sistema.
+eficiência: O software não deve causar disperdícios nos recursos do sistema. Isso inclui eficiencia, capacidade de respostas,
+tempo de processamento, uso de processamentoa, etc.
+aceitabilidade: O software deve ser aceitavel para o tipo de usuário para qual foi projetada.
