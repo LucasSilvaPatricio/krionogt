@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# testando isso
 read DATA
 
 if [ $DATA = 'sair' ];then
