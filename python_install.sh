@@ -35,5 +35,7 @@ pkg install nmap -y
 sleep 1
 
 echo -e "\033[32m"
-toilet -S "Instalação concluida"
+toilet "Instalação"
+toilet "Concluida"
+
 echo -e "\033[0;34mScript criado por [GHOST]"
